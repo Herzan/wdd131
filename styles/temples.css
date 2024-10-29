@@ -6,10 +6,13 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
-  line-height: 1.6;
+  font-family: 'Roboto', sans-serif; /* Use a web-safe fallback font */
+  line-height: 1.6; /* Improve readability with line height */
+  background-color: #f5f5f5; /* Set a light background color for better contrast */
+  color: #333; /* Dark text color for better readability */
 }
 
+/* Header and Navigation Styles */
 header {
   display: flex;
   align-items: center;
@@ -24,7 +27,7 @@ header h1 {
 }
 
 nav {
-  position: relative; /* Added for better navigation control */
+  position: relative;
 }
 
 nav ul {
@@ -52,6 +55,7 @@ nav a:hover {
   color: white;
 }
 
+/* Main Content Styles */
 main {
   padding: 1rem;
   max-width: 600px;
@@ -65,15 +69,12 @@ figure {
   margin-bottom: 1rem;
 }
 
+/* Footer Styles */
 footer {
   background-color: #24099b;
   color: white;
   text-align: center;
   padding: 1rem;
-}
-
-body {
-  font-family: 'Roboto', sans-serif;
 }
 
 h2 {
