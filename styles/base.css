@@ -1,4 +1,4 @@
-/* Example styling */
+/* Universal Styling and Font */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -21,9 +21,9 @@ header, footer {
 /* Navigation Styling */
 nav {
     display: flex;
-    gap: 1rem; /* Space between links */
+    gap: 1rem;
     justify-content: center;
-    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    flex-wrap: wrap;
 }
 
 nav a {
@@ -55,16 +55,16 @@ main {
 /* Grid for Advanced Layouts */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Creates 4 equal-width columns */
-    gap: 10px; /* Space between items */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
 }
 
 .about-me {
-    grid-column: 1 / 2; /* Places "About Me" on the far left */
+    grid-column: 1 / 2;
 }
 
 .resources {
-    grid-column: 3 / 4; /* Places "Web Dev Resources" on the far right */
+    grid-column: 3 / 4;
 }
 
 /* Footer Content Flexbox */
