@@ -1,0 +1,87 @@
+/* Global Styles */
+:root {
+    --primary-color: #d22828;
+    --secondary-color: #007700;
+    --text-color: #ffffff;
+    --box-background: rgba(255, 255, 255, 0.9);
+    --box-border-radius: 8px;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: var(--primary-color);
+  }
+  
+  header {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  h1 {
+    margin: 0;
+    font-size: 2rem;
+  }
+  
+  .hero {
+    position: relative;
+    text-align: center;
+  }
+  
+  .hero-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .data-box, .weather-box {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--box-background);
+    padding: 1rem;
+    border-radius: var(--box-border-radius);
+  }
+  
+  .data-box {
+    left: 10%;
+    max-width: 200px;
+  }
+  
+  .weather-box {
+    right: 10%;
+    max-width: 200px;
+  }
+  
+  h2 {
+    margin: 0;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 0.5rem;
+    border-top-left-radius: var(--box-border-radius);
+    border-top-right-radius: var(--box-border-radius);
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  ul li {
+    margin: 0.5rem 0;
+  }
+  
+  .weather-icon {
+    font-size: 1.5rem;
+  }
+  
+  footer {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+  
