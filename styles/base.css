@@ -1,0 +1,45 @@
+/* Example styling */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+header, footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #0e0374;
+    color: white;
+}
+nav a {
+    color: #eee;
+    padding: 0.5rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: color 0.3s;
+}
+nav a:hover {
+    color: #ffcc00;
+}
+main {
+    display: grid;
+    gap: 1rem;
+    max-width: 800px;
+    margin: auto;
+}
+.card {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    background-color: #f9f9f9;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Creates 4 equal-width columns */
+    gap: 10px; /* Space between items */
+}
+
+.about-me {
+    grid-column: 1 / 2; /* Places "About Me" on the far left */
+}
+
+.resources {
+    grid-column: 3 / 4; /* Places "Web Dev Resources" on the far right */
+}

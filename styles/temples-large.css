@@ -1,0 +1,22 @@
+@media (min-width: 768px) {
+    nav ul {
+      display: flex;
+      gap: 1rem;
+    }
+  
+    #menu-toggle {
+      display: none; /* Hide the menu button on larger screens */
+    }
+  
+    main {
+      max-width: 1000px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+  
+    figure {
+      margin-bottom: 0; /* Compact layout on larger screens */
+    }
+  }
+  
