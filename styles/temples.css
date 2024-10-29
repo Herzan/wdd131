@@ -1,69 +1,99 @@
 /* Basic Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-  }
-  
-  header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #24099b;
-    color: white;
-    padding: 1rem;
-  }
-  
-  header h1 {
-    font-size: 1.5rem;
-  }
-  
-  nav ul {
-    display: none; /* Hidden for mobile view */
-    list-style-type: none;
-  }
-  
-  nav a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  #menu-toggle {
-    font-size: 1.5rem;
-    background: none;
-    border: none;
-    color: white;
-  }
-  
-  main {
-    padding: 1rem;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
-  figure {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    margin-bottom: 1rem;
-  }
-  
-  footer {
-    background-color: #24099b;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-  }
-  -----------------
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  body {font-family: Roboto, sans-serif;}
-  h2 {font-size: 2rem;}
-  h3 {font-size: 1.5rem; color: darkgreen;}
- .container {display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); grid-gap: 25px;place-items: center;}
-  
-  .pic div:nth-of-type(3), .pic div:nth-of-type(8), .pic div:nth-of-type(13)  {	grid-column: 3/5; }
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #24099b;
+  color: white;
+  padding: 1rem;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+nav {
+  position: relative; /* Added for better navigation control */
+}
+
+nav ul {
+  display: none; /* Hidden for mobile view */
+  list-style-type: none;
+  padding: 0; /* Reset padding for the list */
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem; /* Added padding for better click area */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Light overlay on hover */
+  color: #ffcc00; /* Change text color on hover */
+}
+
+#menu-toggle {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+}
+
+main {
+  padding: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+figure {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+footer {
+  background-color: #24099b;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: darkgreen;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 25px;
+  place-items: center;
+}
+
+.pic div:nth-of-type(3),
+.pic div:nth-of-type(8),
+.pic div:nth-of-type(13) {
+  grid-column: 3/5;
+}
