@@ -5,83 +5,100 @@
     --text-color: #ffffff;
     --box-background: rgba(255, 255, 255, 0.9);
     --box-border-radius: 8px;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif; /* Changed to use Google Font */
     margin: 0;
     background-color: var(--primary-color);
-  }
-  
-  header {
+}
+
+header {
     background-color: var(--primary-color);
     color: var(--text-color);
     text-align: center;
     padding: 1rem;
-  }
-  
-  h1 {
+}
+
+h1 {
     margin: 0;
-    font-size: 2rem;
-  }
-  
-  .hero {
+    font-size: 2.5rem; /* Increased size for better visibility */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Added text shadow for depth */
+}
+
+.hero {
     position: relative;
     text-align: center;
-  }
-  
-  .hero-image {
+}
+
+.hero-image {
     width: 100%;
     height: auto;
-  }
-  
-  .data-box, .weather-box {
+}
+
+.data-box, .weather-box {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     background-color: var(--box-background);
     padding: 1rem;
     border-radius: var(--box-border-radius);
-  }
-  
-  .data-box {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Added shadow for depth */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.data-box {
     left: 10%;
     max-width: 200px;
-  }
-  
-  .weather-box {
+}
+
+.weather-box {
     right: 10%;
     max-width: 200px;
-  }
-  
-  h2 {
+}
+
+h2 {
     margin: 0;
     background-color: var(--secondary-color);
     color: var(--text-color);
     padding: 0.5rem;
     border-top-left-radius: var(--box-border-radius);
     border-top-right-radius: var(--box-border-radius);
-  }
-  
-  ul {
+}
+
+ul {
     list-style: none;
     padding: 0;
     margin: 0;
-  }
-  
-  ul li {
+}
+
+ul li {
     margin: 0.5rem 0;
-  }
-  
-  .weather-icon {
+}
+
+.weather-icon {
     font-size: 1.5rem;
-  }
-  
-  footer {
+}
+
+/* Hover effects */
+.data-box:hover, .weather-box:hover {
+    background-color: rgba(255, 255, 255, 0.8); /* Change background on hover */
+}
+
+footer {
     background-color: var(--primary-color);
     color: var(--text-color);
     text-align: center;
     padding: 1rem;
     font-size: 0.9rem;
-  }
-  
+}
+
+/* Pseudo-element for footer */
+footer::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--secondary-color);
+    margin: 1rem auto; /* Centering the line */
+}
