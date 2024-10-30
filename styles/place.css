@@ -8,9 +8,10 @@
 }
 
 body {
-    font-family: 'Roboto', Arial, sans-serif; /* Changed to use Google Font */
+    font-family: 'Roboto', Arial, sans-serif; /* Use Google Font */
     margin: 0;
     background-color: var(--primary-color);
+    padding: 0; /* Ensure no default body padding */
 }
 
 header {
@@ -48,13 +49,13 @@ h1 {
 }
 
 .data-box {
-    left: 10%;
-    max-width: 200px;
+    left: 5%; /* Adjusted for fluidity */
+    max-width: 90%; /* Set max-width to 90% for better responsiveness */
 }
 
 .weather-box {
-    right: 10%;
-    max-width: 200px;
+    right: 5%; /* Adjusted for fluidity */
+    max-width: 90%; /* Set max-width to 90% for better responsiveness */
 }
 
 h2 {
