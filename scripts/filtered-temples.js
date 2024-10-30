@@ -97,12 +97,12 @@ function displayTemples(filteredTemples) {
 
 // Filters
 function filterOld() {
-  const oldTemples = temples.filter(temple => new Date(temple.dedicated).getFullYear() < 1900);
+  const oldTemples = temples.filter(temple => new Date(temple.dedicated).getFullYear() < 1986);
   displayTemples(oldTemples);
 }
 
 function filterNew() {
-  const newTemples = temples.filter(temple => new Date(temple.dedicated).getFullYear() > 2000);
+  const newTemples = temples.filter(temple => new Date(temple.dedicated).getFullYear() > 1987);
   displayTemples(newTemples);
 }
 
