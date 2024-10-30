@@ -3,18 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nicaragua - Explore</title>
+  <title>WDD 131 - Dynamic Web Fundamentals - Herzan Francisco Huerta</title>
+  <meta name="description" content="Join Herzan Francisco Huerta on a journey through WDD 131, exploring the essentials of dynamic web development with HTML, CSS, and JavaScript. Discover valuable skills and resources to enhance your web development expertise.">
+  <meta name="author" content="Herzan Francisco Huerta">
   <link rel="stylesheet" href="styles/place.css">
   <script src="scripts/place.js" defer></script>
 </head>
 <body>
   <header>
-    <h1>Nicaragua</h1>
+    <h1>Explore Nicaragua - Dynamic Web Fundamentals</h1>
   </header>
 
   <main>
+    <!-- Hero Section -->
     <section class="hero">
-      <img src="images/Guard.jfif" alt="Guardabarranco" class="hero-image">
+      <img 
+      src="images/Guard.webp" 
+      srcset="images/Guard.webp 400w, images/Guard.webp 800w, images/Guard.webp 1200w" 
+      sizes="(max-width: 600px) 400px, (max-width: 1200px) 800px, 1200px" 
+      alt="Guardabarranco, the national bird of Nicaragua"
+      class="hero-image" 
+        class="hero-image">
       <div class="data-box">
         <h2>Data</h2>
         <ul>
@@ -27,16 +36,17 @@
           <li><strong>Calling Code:</strong> +505</li>
           <li><strong>Internet TLD:</strong> .ni</li>
         </ul>
-        </div>
-        <div class="weather-box">
-          <h2>Weather <span class="weather-icon">⛅</span></h2>
-          <p><strong>Temperature:</strong> 28 °C</p> <!-- Example value; adjust as needed -->
-          <p><strong>Conditions:</strong> Mostly Sunny</p> <!-- Example value; adjust as needed -->
-          <p><strong>Wind:</strong> 12 km/h</p> <!-- Example value; adjust as needed -->
-          <p><strong>Wind Chill:</strong> <span id="wind-chill">N/A</span></p> <!-- Calculated in JavaScript if needed -->
-        </div>
-        
+      </div>
+    </section> <!-- Close the section here -->
 
+    <!-- Weather Section -->
+    <section class="weather-box">
+      <h2>Weather <span class="weather-icon">⛅</span></h2>
+      <p><strong>Temperature:</strong> 28 °C</p> <!-- Example value; adjust as needed -->
+      <p><strong>Conditions:</strong> Mostly Sunny</p> <!-- Example value; adjust as needed -->
+      <p><strong>Wind:</strong> 12 km/h</p> <!-- Example value; adjust as needed -->
+      <p><strong>Wind Chill:</strong> <span id="wind-chill">N/A</span></p> <!-- Calculated in JavaScript if needed -->
+    </section>
   </main>
 
   <footer>
