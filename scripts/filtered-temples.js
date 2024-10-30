@@ -59,7 +59,19 @@ const temples = [
     dedicated: "2014-11-16",
     size: "58,000",
     imageUrl: "images/phoenix.jpg"
-  }
+  },
+  {
+    location: "Toronto, Ontario, Canada",
+    dedicated: "2004-04-30",
+    size: "119,000",
+    imageUrl: "images/Ontario.jpg"
+},
+{
+  location: "Edmonton, Alberta, Canada",
+  dedicated: "1999-10-17",
+  size: "62,000",
+  imageUrl: "images/Edmonto.jpg"
+}
 ];
 
 // Function to display all temples
