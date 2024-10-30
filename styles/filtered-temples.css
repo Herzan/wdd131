@@ -39,6 +39,15 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: 400;
+    padding: 5px 10px; /* Añadir espaciado alrededor del texto */
+    transition: color 0.3s, background-color 0.3s; /* Transiciones suaves */
+}
+
+/* Efecto hover para los enlaces */
+nav ul li a:hover {
+    background-color: #ffdead; /* Color de fondo en hover */
+    color: #4b0082; /* Cambia el color del texto en hover */
+    border-radius: 5px; /* Bordes redondeados */
 }
 
 #menu-toggle {
