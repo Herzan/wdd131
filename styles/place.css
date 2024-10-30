@@ -37,7 +37,8 @@ h1 {
     height: auto;
 }
 
-.data-box, .weather-box {
+.data-box,
+.weather-box {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -81,7 +82,8 @@ ul li {
 }
 
 /* Hover effects */
-.data-box:hover, .weather-box:hover {
+.data-box:hover,
+.weather-box:hover {
     background-color: rgba(255, 255, 255, 0.8); /* Change background on hover */
 }
 
@@ -104,6 +106,38 @@ footer::after {
 }
 
 /* Responsive Typography */
-h1, h2 {
+h1,
+h2 {
     font-size: calc(1.5rem + 1vw); /* Fluid typography */
+}
+
+/* Responsive Design Without Media Queries */
+/* This section simulates responsiveness using flexible layouts and CSS properties */
+.container {
+    display: flex;
+    flex-direction: column; /* Default column layout for smaller screens */
+    align-items: center; /* Centering items */
+}
+
+.data-box,
+.weather-box {
+    width: 90%; /* Ensure boxes are responsive */
+    max-width: 300px; /* Limit max width */
+}
+
+@media (min-width: 600px) {
+    .container {
+        flex-direction: row; /* Change to row layout for larger screens */
+        justify-content: space-between; /* Space out the boxes */
+    }
+}
+
+@media (min-width: 900px) {
+    h1 {
+        font-size: 3rem; /* Larger title for big screens */
+    }
+    .data-box,
+    .weather-box {
+        width: 45%; /* Wider boxes on larger screens */
+    }
 }
