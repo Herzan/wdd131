@@ -112,7 +112,7 @@ function filterLarge() {
 }
 
 function filterSmall() {
-  const smallTemples = temples.filter(temple => parseInt(temple.size.replace(/,/g, '')) < 10000);
+  const smallTemples = temples.filter(temple => parseInt(temple.size.replace(/,/g, '')) < 62000);
   displayTemples(smallTemples);
 }
 
