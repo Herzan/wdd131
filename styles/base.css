@@ -43,7 +43,7 @@ nav a:hover {
 /* Main Content Styling */
 .grid-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; /* Three equal columns */
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
     gap: 1rem;
     max-width: 1200px;
     margin: auto;
@@ -66,7 +66,7 @@ nav a:hover {
 }
 
 .resources {
-    grid-column: 3 / 4; /* Occupies the third column */
+    grid-column: 3; /* Occupies the third column */
 }
 
 .card h2 {
