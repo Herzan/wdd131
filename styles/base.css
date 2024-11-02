@@ -76,7 +76,6 @@ nav a:hover {
     text-align: center;
     margin: 0 auto; /* Keeping the margin tight */
     border-radius: 0.5px;
-    border: 0.5px ;
 }
 
 .about-me img {
@@ -101,3 +100,47 @@ footer {
     gap: 0.5rem;
 }
 
+/* Styles for mobile screens with a max width of 767px */
+@media (max-width: 767px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Single column layout */
+        padding: 0.5rem; /* Reduced padding for mobile */
+    }
+
+    .about-me {
+        grid-column: 1; /* Full width on mobile */
+    }
+
+    .card {
+        margin-bottom: 1rem; /* Add spacing between cards */
+    }
+
+    nav {
+        flex-direction: column; /* Stack navigation links vertically */
+    }
+
+    nav a {
+        padding: 0.5rem; /* Reduce padding for navigation links */
+    }
+
+    /* Orientation-specific styles */
+    @media (orientation: portrait) {
+        .element-to-rotate {
+            transform: rotate(0deg); /* Normal position for portrait */
+        }
+
+        body {
+            padding: 10px; /* Adjust body padding if needed */
+        }
+    }
+
+    @media (orientation: landscape) {
+        .element-to-rotate {
+            transform: rotate(90deg); /* Rotate element by 90 degrees for landscape */
+        }
+
+        body {
+            padding: 5px; /* Adjust body padding if needed */
+        }
+    }
+}
