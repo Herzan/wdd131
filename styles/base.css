@@ -125,22 +125,22 @@ footer {
 
     /* Orientation-specific styles */
     @media (orientation: portrait) {
-        .element-to-rotate {
-            transform: rotate(0deg); /* Normal position for portrait */
-        }
-
         body {
             padding: 10px; /* Adjust body padding if needed */
+        }
+
+        .element-to-rotate {
+            transform: rotate(0deg); /* Normal position for portrait */
         }
     }
 
     @media (orientation: landscape) {
-        .element-to-rotate {
-            transform: rotate(90deg); /* Rotate element by 90 degrees for landscape */
-        }
-
         body {
             padding: 5px; /* Adjust body padding if needed */
+        }
+
+        .element-to-rotate {
+            transform: rotate(90deg); /* Rotate element by 90 degrees for landscape */
         }
     }
 }
