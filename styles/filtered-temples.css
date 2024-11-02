@@ -74,42 +74,37 @@ nav ul li a:hover {
     border-radius: 8px;
     padding: 15px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    overflow: hidden; /* Ensure the image does not overflow the card */
-    transition: box-shadow 0.3s ease; /* Smooth transition for the shadow */
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px); /* Start slightly moved down */
+    animation: fadeInUp 0.8s ease forwards; /* Animation settings */
+    transition: transform 0.3s ease; /* Smooth hover effect */
 }
 
-/* Hover effect with triple shadow */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Move to original position */
+    }
+}
+
+/* Bounce effect on hover */
 .temple-card:hover {
+    transform: translateY(-10px); /* Move up slightly on hover */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2),
                 0 8px 20px rgba(0, 0, 0, 0.15),
                 0 12px 30px rgba(0, 0, 0, 0.1);
 }
 
-/* Styling for the image */
+/* Image styling remains the same */
 .temple-card img {
     max-width: 100%;
     border-radius: 5px;
     transition: transform 0.5s ease; /* Smooth zoom-in effect */
 }
 
-/* Zoom-in effect on hover */
 .temple-card:hover img {
-    transform: scale(1.1); /* Scale the image to 110% of its size */
+    transform: scale(1.05); /* Zoom in image slightly on hover */
 }
-
-.temple-card p {
-    margin: 5px 0;
-}
-
-.temple-card figure {
-    margin: 0;
-}
-
-.temple-card img {
-    max-width: 100%;
-    border-radius: 5px;
-}
-
 
 
 /* Footer styling */
