@@ -2,7 +2,7 @@
 :root {
     --primary-color: #d22828;
     --secondary-color: #007700;
-    --text-color: #ffffff;
+    --text-color: #ffffff;  
     --box-background: rgba(255, 255, 255, 0.9);
     --box-border-radius: 8px;
 }
@@ -39,23 +39,14 @@ h1 {
 
 .data-box,
 .weather-box {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    position: relative; /* Changed to relative for better responsiveness */
     background-color: var(--box-background);
     padding: 1rem;
     border-radius: var(--box-border-radius);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Added shadow for depth */
     transition: background-color 0.3s; /* Smooth transition */
     max-width: 90%; /* Make boxes responsive */
-}
-
-.data-box {
-    left: 5%; /* Responsive positioning */
-}
-
-.weather-box {
-    right: 5%; /* Responsive positioning */
+    margin: 1rem 0; /* Add margin for spacing */
 }
 
 h2 {
@@ -112,7 +103,6 @@ h2 {
 }
 
 /* Responsive Design Without Media Queries */
-/* This section simulates responsiveness using flexible layouts and CSS properties */
 .container {
     display: flex;
     flex-direction: column; /* Default column layout for smaller screens */
@@ -125,6 +115,7 @@ h2 {
     max-width: 300px; /* Limit max width */
 }
 
+/* Responsive Layout for Larger Screens */
 @media (min-width: 600px) {
     .container {
         flex-direction: row; /* Change to row layout for larger screens */
@@ -139,5 +130,18 @@ h2 {
     .data-box,
     .weather-box {
         width: 45%; /* Wider boxes on larger screens */
+    }
+}
+
+/* Orientation-specific adjustments */
+@media (orientation: portrait) {
+    body {
+        padding: 10px; /* Padding for portrait orientation */
+    }
+}
+
+@media (orientation: landscape) {
+    body {
+        padding: 5px; /* Padding for landscape orientation */
     }
 }
