@@ -1,6 +1,6 @@
 /* Global Styles */
 :root {
-    --primary-color: #d22828;
+    --primary-color: #481092;
     --secondary-color: #007700;
     --text-color: #ffffff;  
     --box-background: rgba(255, 255, 255, 0.9);
@@ -44,7 +44,7 @@ h1 {
     border-radius: var(--box-border-radius);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Added shadow for depth */
     transition: background-color 0.3s; /* Smooth transition */
-    max-width: 90%; /* Make boxes responsive */
+    width: 90%; /* Make boxes responsive */
     margin: 1rem auto; /* Add margin for spacing */
 }
 
@@ -101,22 +101,20 @@ h2 {
     font-size: calc(1.5rem + 1vw); /* Fluid typography */
 }
 
-/* Responsive Design */
-.container {
-    display: flex;
-    flex-direction: column; /* Default column layout for smaller screens */
-    align-items: center; /* Centering items */
-}
-
-.data-box,
-.weather-box {
-    width: 90%; /* Ensure boxes are responsive */
-    max-width: 90%; /* Limit max width */
+/* Mobile Styles */
+@media (max-width: 767px) {
+    /* Styles for smaller screens (mobiles) */
+    .data-box,
+    .weather-box {
+        width: 95%; /* Wider boxes on mobile */
+        margin: 1rem auto; /* Center the boxes */
+    }
 }
 
 /* Responsive Layout for Larger Screens */
 @media (min-width: 600px) {
     .container {
+        display: flex;
         flex-direction: row; /* Change to row layout for larger screens */
         justify-content: space-between; /* Space out the boxes */
     }
