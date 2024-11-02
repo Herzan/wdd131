@@ -8,127 +8,168 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-header {
+  }
+  
+  header {
     background-color: #4b0082;
     color: #fff;
     width: 100%;
     padding: 20px;
     text-align: center;
-}
-
-header h1 {
+  }
+  
+  header h1 {
     margin: 0;
     font-weight: 700;
-}
-
-nav {
+  }
+  
+  nav {
     margin-top: 10px;
-}
-
-nav ul {
+  }
+  
+  nav ul {
     list-style: none;
     padding: 0;
     display: flex;
     gap: 15px;
     justify-content: center;
-}
-
-nav ul li a {
+  }
+  
+  nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: 400;
-    padding: 5px 10px; /* Añadir espaciado alrededor del texto */
-    transition: color 0.3s, background-color 0.3s; /* Transiciones suaves */
-}
-
-/* Efecto hover para los enlaces */
-nav ul li a:hover {
-    background-color: #ffdead; /* Color de fondo en hover */
-    color: #4b0082; /* Cambia el color del texto en hover */
-    border-radius: 5px; /* Bordes redondeados */
-}
-
-#menu-toggle {
+    padding: 5px 10px;
+    transition: color 0.3s, background-color 0.3s;
+  }
+  
+  nav ul li a:hover {
+    background-color: #ffdead;
+    color: #4b0082;
+    border-radius: 5px;
+  }
+  
+  #menu-toggle {
     background: none;
     border: none;
     font-size: 1.5rem;
     color: #fff;
     cursor: pointer;
-    display: none; /* Hidden by default for desktop */
-}
-
-.temple-cards-container {
-    display: grid; /* Usar grid para el contenedor */
-    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
-    gap: 20px; /* Espaciado entre tarjetas */
-    width: 100%; /* Ancho del contenedor */
-    max-width: 1200px; /* Ancho máximo del contenedor */
-    padding: 20px; /* Espacio interno */
-}
-
-.temple-card {
+    display: none;
+  }
+  
+  .temple-cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+  }
+  
+  .temple-card {
     background-color: white;
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 15px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    opacity: 0; /* Start hidden */
-    transform: translateY(20px); /* Start slightly moved down */
-    animation: fadeInUp 0.8s ease forwards; /* Animation settings */
-    transition: transform 0.3s ease; /* Smooth hover effect */
-}
-
-@keyframes fadeInUp {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards;
+    transition: transform 0.3s ease;
+  }
+  
+  @keyframes fadeInUp {
     to {
-        opacity: 1;
-        transform: translateY(0); /* Move to original position */
+      opacity: 1;
+      transform: translateY(0);
     }
-}
-
-/* Bounce effect on hover */
-.temple-card:hover {
-    transform: translateY(-10px); /* Move up slightly on hover */
+  }
+  
+  .temple-card:hover {
+    transform: translateY(-10px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2),
                 0 8px 20px rgba(0, 0, 0, 0.15),
                 0 12px 30px rgba(0, 0, 0, 0.1);
-}
-
-/* Image styling remains the same */
-.temple-card img {
-    max-width: 100%;
-    border-radius: 5px;
-    transition: transform 0.5s ease; /* Smooth zoom-in effect */
-}
-
-.temple-card:hover img {
-    transform: scale(1.05); /* Zoom in image slightly on hover */
-}
-
-/* Styles for larger screens (desktops) */
-@media (min-width: 768px) {
-    /* Add your desktop-specific styles here */
   }
   
-  /* Styles for smaller screens (mobiles) */
-  @media (max-width: 767px) {
-    /* Add your mobile-specific styles here */
+  .temple-card img {
+    max-width: 100%;
+    border-radius: 5px;
+    transition: transform 0.5s ease;
   }
-
-/* Footer styling */
-footer {
+  
+  .temple-card:hover img {
+    transform: scale(1.05);
+  }
+  
+  footer {
     background-color: #4b0082;
     color: #fff;
     padding: 10px 20px;
     text-align: center;
     width: 100%;
-}
-
-footer p {
+  }
+  
+  footer p {
     margin: 5px;
-}
-
-footer span {
+  }
+  
+  footer span {
     color: #ffdead;
-}
+  }
+  
+  /* Styles for smaller screens (mobiles) */
+  @media (max-width: 767px) {
+    /* Container adjustments */
+    .container {
+      padding: 10px;
+      text-align: center;
+    }
+  
+    /* Adjusting elements for vertical layout */
+    header, .content, footer {
+      display: block;
+      margin-bottom: 20px;
+    }
+  
+    /* Center images horizontally */
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+  
+    /* Adjust text and headings */
+    h1, h2, h3, p {
+      font-size: 16px;
+      line-height: 1.5;
+      margin: 10px 0;
+    }
+  
+    /* Navigation bar or menu */
+    nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    /* Buttons and forms */
+    button {
+      width: 100%;
+      padding: 12px;
+    }
+  
+    /* General adjustments for horizontal overflow */
+    body {
+      overflow-x: hidden;
+    }
+  
+    /* Adjust temple-cards-container for single-column layout */
+    .temple-cards-container {
+      grid-template-columns: 1fr; /* One column on small screens */
+      gap: 15px; /* Adjust spacing if needed */
+    }
+  }
+  
