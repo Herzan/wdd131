@@ -4,172 +4,197 @@ body {
     background-color: #f5f5f5;
     color: #333;
     margin: 0;
-    padding: 0;
+    padding: 5px; /* Adjust body padding if needed */
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  
-  header {
+}
+
+header {
     background-color: #4b0082;
     color: #fff;
     width: 100%;
     padding: 20px;
     text-align: center;
-  }
-  
-  header h1 {
+}
+
+header h1 {
     margin: 0;
     font-weight: 700;
-  }
-  
-  nav {
+}
+
+nav {
     margin-top: 10px;
-  }
-  
-  nav ul {
+}
+
+nav ul {
     list-style: none;
     padding: 0;
     display: flex;
     gap: 15px;
     justify-content: center;
-  }
-  
-  nav ul li a {
+}
+
+nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: 400;
     padding: 5px 10px;
     transition: color 0.3s, background-color 0.3s;
-  }
-  
-  nav ul li a:hover {
+}
+
+nav ul li a:hover {
     background-color: #ffdead;
     color: #4b0082;
     border-radius: 5px;
-  }
-  
-  #menu-toggle {
+}
+
+#menu-toggle {
     background: none;
     border: none;
     font-size: 1.5rem;
     color: #fff;
     cursor: pointer;
-    display: none;
-  }
-  
-  .temple-cards-container {
+    display: none; /* Hidden by default for desktop */
+}
+
+.temple-cards-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     width: 100%;
     max-width: 1200px;
     padding: 20px;
-  }
-  
-  .temple-card {
+}
+
+.temple-card {
     background-color: white;
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 15px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.8s ease forwards;
-    transition: transform 0.3s ease;
-  }
-  
-  @keyframes fadeInUp {
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px); /* Start slightly moved down */
+    animation: fadeInUp 0.8s ease forwards; /* Animation settings */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+@keyframes fadeInUp {
     to {
-      opacity: 1;
-      transform: translateY(0);
+        opacity: 1;
+        transform: translateY(0); /* Move to original position */
     }
-  }
-  
-  .temple-card:hover {
-    transform: translateY(-10px);
+}
+
+.temple-card:hover {
+    transform: translateY(-10px); /* Move up slightly on hover */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2),
                 0 8px 20px rgba(0, 0, 0, 0.15),
                 0 12px 30px rgba(0, 0, 0, 0.1);
-  }
-  
-  .temple-card img {
+}
+
+.temple-card img {
     max-width: 100%;
     border-radius: 5px;
-    transition: transform 0.5s ease;
-  }
-  
-  .temple-card:hover img {
-    transform: scale(1.05);
-  }
-  
-  footer {
+    transition: transform 0.5s ease; /* Smooth zoom-in effect */
+}
+
+.temple-card:hover img {
+    transform: scale(1.05); /* Zoom in image slightly on hover */
+}
+
+footer {
     background-color: #4b0082;
     color: #fff;
     padding: 10px 20px;
     text-align: center;
     width: 100%;
-  }
-  
-  footer p {
+}
+
+footer p {
     margin: 5px;
-  }
-  
-  footer span {
+}
+
+footer span {
     color: #ffdead;
-  }
-  
-  /* Styles for smaller screens (mobiles) */
-  @media (max-width: 767px) {
+}
+
+/* Styles for mobile screens (max-width: 767px) */
+@media (max-width: 767px) {
     /* Container adjustments */
     .container {
-      padding: 10px;
-      text-align: center;
+        padding: 10px; /* Add more or less padding to adjust spacing */
+        text-align: center; /* Center-align text if needed */
     }
-  
+
     /* Adjusting elements for vertical layout */
     header, .content, footer {
-      display: block;
-      margin-bottom: 20px;
+        display: block; /* Stack elements vertically */
+        margin-bottom: 20px; /* Add space between sections */
     }
-  
+
     /* Center images horizontally */
     img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      margin: 0 auto;
+        max-width: 100%; /* Ensure images are responsive */
+        height: auto; /* Maintain aspect ratio */
+        display: block; /* Treat the image as a block element */
+        margin: 0 auto; /* Center image horizontally */
     }
-  
+
     /* Adjust text and headings */
     h1, h2, h3, p {
-      font-size: 16px;
-      line-height: 1.5;
-      margin: 10px 0;
+        font-size: 16px; /* Adjust font size for better readability */
+        line-height: 1.5; /* Increase line height for better spacing */
+        margin: 10px 0; /* Add vertical space between text elements */
     }
-  
+
     /* Navigation bar or menu */
     nav {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+        display: flex;
+        flex-direction: column; /* Stack menu items vertically */
+        align-items: center; /* Center items horizontally */
     }
-  
+
     /* Buttons and forms */
     button {
-      width: 100%;
-      padding: 12px;
+        width: 100%; /* Make buttons full width */
+        padding: 12px; /* Add padding for touch-friendly size */
     }
-  
+
     /* General adjustments for horizontal overflow */
     body {
-      overflow-x: hidden;
+        overflow-x: hidden; /* Prevent horizontal scrolling */
     }
-  
+
     /* Adjust temple-cards-container for single-column layout */
     .temple-cards-container {
-      grid-template-columns: 1fr; /* One column on small screens */
-      gap: 15px; /* Adjust spacing if needed */
+        grid-template-columns: 1fr; /* One column on small screens */
+        gap: 15px; /* Adjust spacing if needed */
     }
-  }
-  
+
+    /* Portrait orientation styles */
+    @media (orientation: portrait) {
+        /* Elements specific to portrait mode */
+        .element-to-rotate {
+            transform: rotate(0deg); /* Normal position */
+        }
+        
+        /* Adjust body padding if needed */
+        body {
+            padding: 10px;
+        }
+    }
+
+    /* Landscape orientation styles */
+    @media (orientation: landscape) {
+        /* Elements specific to landscape mode */
+        .element-to-rotate {
+            transform: rotate(90deg); /* Rotate element by 90 degrees */
+        }
+
+        /* Adjust body padding if needed */
+        body {
+            padding: 5px;
+        }
+    }
+}
