@@ -39,7 +39,6 @@ h1 {
 
 .data-box,
 .weather-box {
-    position: relative; /* Changed to relative for better responsiveness */
     background-color: var(--box-background);
     padding: 1rem;
     border-radius: var(--box-border-radius);
@@ -138,10 +137,19 @@ h2 {
     body {
         padding: 10px; /* Padding for portrait orientation */
     }
+    .data-box,
+    .weather-box {
+        width: 95%; /* Wider boxes in portrait mode */
+        max-width: none; /* Remove max width */
+    }
 }
 
 @media (orientation: landscape) {
     body {
         padding: 5px; /* Padding for landscape orientation */
+    }
+    .data-box,
+    .weather-box {
+        width: 45%; /* Use more space in landscape */
     }
 }
