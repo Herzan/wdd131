@@ -74,16 +74,32 @@ nav ul li a:hover {
     border-radius: 8px;
     padding: 15px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease; /* Smooth transition effect */
+    overflow: hidden; /* Ensure the image does not overflow the card */
+    transition: box-shadow 0.3s ease; /* Smooth transition for the shadow */
 }
 
 /* Hover effect with triple shadow */
 .temple-card:hover {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2), /* First shadow */
-                0 8px 20px rgba(0, 0, 0, 0.15), /* Second shadow */
-                0 12px 30px rgba(0, 0, 0, 0.1); /* Third shadow */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2),
+                0 8px 20px rgba(0, 0, 0, 0.15),
+                0 12px 30px rgba(0, 0, 0, 0.1);
 }
 
+/* Styling for the image */
+.temple-card img {
+    max-width: 100%;
+    border-radius: 5px;
+    transition: transform 0.5s ease; /* Smooth zoom-in effect */
+}
+
+/* Zoom-in effect on hover */
+.temple-card:hover img {
+    transform: scale(1.1); /* Scale the image to 110% of its size */
+}
+
+.temple-card p {
+    margin: 5px 0;
+}
 
 .temple-card figure {
     margin: 0;
@@ -94,9 +110,7 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
-.temple-card p {
-    margin: 5px 0;
-}
+
 
 /* Footer styling */
 footer {
