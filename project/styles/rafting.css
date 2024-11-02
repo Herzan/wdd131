@@ -1,0 +1,252 @@
+/* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Header styles */
+header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+nav{
+    display: flex;
+}
+nav a {
+    margin-right: 20px;
+}
+
+.navigation {
+    display: flex;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Section styles */
+section {
+    padding: 40px;
+}
+.navigation a:hover {
+	color: tomato;
+	font-weight: 700;
+	text-decoration: underline;
+}
+.history, .adventures {
+    background-color: #f2f2f2;
+}
+
+.adventures {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.adventures figure {
+    margin-right: 20px;
+}
+
+.adventures img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+figcaption {
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: right;
+}
+
+.social-icons {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.social-icons li {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.rivers-card, .camping-card, .rapids-card, .mountains-card, .rafting-card  {
+    margin: 100px 0;
+}
+.card-img {
+    border: 10px solid #4A4E69;
+    transition: transform .5s;
+    box-shadow: 5px 5px 10px #6f7364;
+}
+.card-img:hover {
+    opacity: .6;
+    transform: scale(1.1);
+}
+.main section img {
+    box-sizing: border-box;
+}
+.home-grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+}
+.card-img, .mountains {
+    width: 100%
+}
+.rivers-card {
+    grid-column: 2/4;
+    grid-row: 2/3;
+}
+.camping-card {
+    grid-column: 5/7;
+    grid-row: 2/3;
+}
+.rapids-card {
+    grid-column: 8/10;
+    grid-row: 2/3;
+}
+.mountains-card {
+    grid-column: 8/10;
+    grid-row: 2/3;
+   
+}
+.rafting-card {
+    grid-column: 8/10;
+    grid-row: 2/3;
+   
+}
+
+.adventure-grid{
+    display: flex;
+    width: 100px;
+
+}
+.adventure-grid section{
+    padding: 10px;
+    width: 20%;
+}
+.care-img{
+    width: 100%;
+}
+
+.history_box{
+    display: flex;
+}
+/* .adventure-grids section img */
+
+
+main{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+       }
+    
+    form {
+    /* Center the form on the page */
+    margin: 0 auto;
+    width: 400px;
+    /* Form outline */
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 1em;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    }
+    .company-info{
+    grid-column: 1/2;
+    }
+    .employee-profiles{
+    grid-column: 1/2; 
+    }
+    #feedback{
+    grid-column: 1/2;  
+    }
+    
+    ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    }
+    
+    form li + li {
+    margin-top: 1em;
+    }
+    
+    label {
+    /* Uniform size & alignment */
+    display: inline-block;
+    width: 90px;
+    text-align: right;
+    }
+    
+    input,
+    textarea {
+    /* To make sure that all text fields have the same font settings
+    By default, textareas have a monospace font */
+    font: 1em sans-serif;
+    
+    /* Uniform text field size */
+    width: 300px;
+    box-sizing: border-box;
+    
+    /* Match form field borders */
+    border: 1px solid #999;
+    }
+    
+    input:focus,
+    textarea:focus {
+    /* Additional highlight for focused elements */
+    border-color: #000;
+    }
+    
+    textarea {
+    /* Align multiline text fields with their labels */
+    vertical-align: top;
+    
+    /* Provide space to type some text */
+    height: 5em;
+    }
+    
+    .button {
+    /* Align buttons with the text fields */
+    padding-left: 90px; /* same size as the label elements */
+    }
+    
+    button {
+    /* This extra margin represent roughly the same space as the space
+    between the labels and their text fields */
+    margin-left: 0.5em;
+    }
+    #feedback {
+    background-color: antiquewhite;
+    position: absolute;
+    top: 0;
