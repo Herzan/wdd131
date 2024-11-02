@@ -1,160 +1,219 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200&family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
 
 :root {
-
-  --primary-color: #396e94   ;
-  --secondary-color: #e7c24f ;
+  --primary-color: #396e94;
+  --secondary-color: #e7c24f;
   --accent1-color: #a43312;
   --accent2-color: #381d2a;
 
+  --heading-font: 'Rock Salt', cursive;
+  --paragraph-font: 'Roboto', sans-serif;
 
-  --heading-font: "Rock Salt";
-  --paragraph-font: "Roboto Slab", Helvetica, sans-serif;
-
-
-  --headline-color-on-white: #396E94; 
-  --headline-color-on-color: white; 
-  --paragraph-color-on-white: #0D1B2A; 
-  --paragraph-color-on-color: white; 
-  --paragraph-background-color: #0D1B2A  ;
+  --headline-color: var(--primary-color);
+  --paragraph-color: #0D1B2A;
+  --colored-paragraph-color: var(--accent1-color);
   --nav-link-color: #021727;
-  --nav-background-color: #027c8f;
+  --nav-background-color: var(--secondary-color);
   --nav-hover-link-color: white;
-  --nav-hover-background-color: #396E94;
+  --nav-hover-background-color: var(--primary-color);
 }
-
-
 
 body {
   max-width: 960px;
   margin: 0 auto;
-  padding: 4em;
+  padding: 2em;
   font-size: 18px;
+  font-family: var(--paragraph-font);
   text-align: center;
 }
-img {
-  display: block;
-  margin: 0 auto;
-  max-width: 300px;
+
+header {
+  padding: 1em 0;
+  background-color: var(--primary-color);
+  color: white;
 }
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--heading-font);
-  color: var(--headline-color-on-white);
+
+h1 {
+  font-size: 2.5rem;
+  margin: 0.5em 0;
 }
+
 h2 {
-  text-align: center;
+  font-size: 1.5rem;
+  margin: 0.5em 0;
 }
+
 hr {
   height: 3px;
   margin: 35px 0;
   background: var(--accent1-color);
 }
-header {
-  padding: 1em;
-  text-align: center;
-  color: var(--headline-color-on-color);
-  background-color: var(--paragraph-background-color);
-}
-header > h1, header > h2 {
-  color: var(--headline-color-on-color);
-}
+
 p {
-  font-family: var(--paragraph-font);
-  color: var(--paragraph-color-on-white);
-  padding: 1em;
+  color: var(--paragraph-color);
+  line-height: 1.5;
 }
+
 .colors {
   width: 100%;
-  min-width: 350px;
   margin: 30px auto;
   text-align: center;
 }
+
 .colors th {
-  background-color: #999;
+  background-color: var(--secondary-color);
+  color: white;
 }
-.colors td{
+
+.colors td {
   width: 25%;
   height: 3em;
 }
+
 .primary {
   background-color: var(--primary-color);
 }
+
 .secondary {
   background-color: var(--secondary-color);
 }
+
 .accent1 {
   background-color: var(--accent1-color);
 }
-.accent2{
+
+.accent2 {
   background-color: var(--accent2-color);
 }
+
 p.colored {
-  background-color: var(--paragraph-background-color);
-  color: var(--paragraph-color-on-color);
+  background-color: var(--accent1-color);
+  color: white;
+  padding: 0.5em;
 }
+
 nav {
   background-color: var(--nav-background-color);
-  line-height: 3em;
-  text-align: center;
-  font-size: 1.2em;
-}
-nav  {
-  list-style-type: none;
+  padding: 1em 0;
   display: flex;
+  justify-content: center;
 }
+
 nav a {
-  padding:1em;
-  min-width: 120px;
-  text-decoration: none;
-  padding: 10px;
-}
-nav a:link, nav a:visited {
+  padding: 0.5em 1em;
   color: var(--nav-link-color);
+  text-decoration: none;
+  margin: 0 10px;
 }
+
 nav a:hover {
   color: var(--nav-hover-link-color);
   background-color: var(--nav-hover-background-color);
+  border-radius: 5px;
 }
+
 .sitemap {
   display: grid;
   justify-content: center;
-
-  grid-template-columns: repeat(6, 15%);
-  grid-template-rows: 3em 1.5em 1.5em 3em;
-  grid-template-areas: ". . home home . ."
-    ". . . top . ."
-    ". left left right right ."
-    "page2 page2 . . page3 page3";
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+  margin-top: 1em;
 }
+
 .sitemap > div {
+  background-color: #ccc;
+  padding: 1em;
   text-align: center;
 }
-.sm-home {
-  grid-area: home;
-  background-color: #ccc;
-  line-height: 3em;
+
+/* Basic styling for footer */
+footer {
+  background-color: var(--accent2-color);
+  color: rgb(255, 255, 255);
+  padding: 1.5rem;
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space between left and right sections */
+  align-items: center; /* Align items vertically centered */
+  text-align: left; /* Align text to the left for consistency */
 }
-.sm-page2 {
-  grid-area: page2;
-  background-color: #ccc;
-  line-height: 3em;
+
+/* Left section of footer */
+.footer-left {
+  margin-bottom: 1em;
 }
-.sm-page3 {
-  grid-area: page3;
-  background-color: #ccc;
-  line-height: 3em;
+
+/* Paragraphs in the left footer */
+.footer-left p {
+  margin: 0.5em 0; /* Add spacing between paragraphs */
+  color: white; /* Set text color of paragraphs to white */
 }
-.top {
-  grid-area: top;
-  border-left: 1px solid;
+
+/* Links in the left footer */
+.footer-left a {
+  color: white; /* Set link color to white */
+  text-decoration: underline; /* Underline links */
 }
-.left {
-  grid-area: left;
-  border-top: 1px solid;
-  border-left: 1px solid;
+
+.footer-left a:hover {
+  color: var(--secondary-color); /* Change link color on hover */
 }
-.right {
-  grid-area: right;
-  border-top: 1px solid;
-  border-right: 1px solid;
+
+/* Right section of footer */
+.footer-right {
+  text-align: right; /* Align text to the right */
+}
+
+/* Links in the right footer */
+.footer-right a {
+  color: white; /* Set link color to white */
+  text-decoration: underline; /* Underline links */
+}
+
+.footer-right a:hover {
+  color: var(--secondary-color); /* Change link color on hover */
+}
+
+.social {
+  margin-top: 1em;
+}
+
+.social a {
+  margin: 0 5px;
+}
+
+.social img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Responsive Styles */
+@media (max-width: 767px) {
+  body {
+    padding: 1em;
+  }
+
+  header, footer {
+    padding: 1em;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+
+  nav a {
+    margin: 0.5em 0;
+  }
+
+  .sitemap {
+    grid-template-columns: 1fr; /* Single column for mobile */
+  }
 }

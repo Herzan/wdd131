@@ -5,16 +5,20 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Site Plan</title>
-  <meta name="description" content="Rafting Site Plan">
-  <meta name="author" content="Rafting Project">
-  <link type="text/css" rel="stylesheet" href="styles/site-plan-rafting.css" />
+  <meta name="description" content="Join Herzan Francisco Huerta on a journey through WDD 131, exploring the essentials of dynamic web development with HTML, CSS, and JavaScript. Discover valuable skills and resources to enhance your web development expertise.">
+  <meta name="author" content="Herzan Francisco Huerta">
+  <link rel="stylesheet" href="/project/styles/site-plan-rafting.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="/project/scripts/siteplan.js" defer></script>
 </head>
 
 <body>
   <header>
     <h1>Rafting Site Plan</h1>
-    <h2>[Herzan Carcache Huerta]</h2>
-    <h2>WDD 130</h2>
+    <h2>[Herzan Francisco Huerta]</h2>
+    <h2>WDD 131</h2>
   </header>
   <main>
     <hr />
@@ -78,24 +82,9 @@ ensures an unforgettable river experience tailored just for you."</p>
     
     <nav>
       <a href="index.html">Home</a>
-      <a href="/project/trips.html">FAQ</a>
+      <a href="/project/about.html">FAQ</a>
       <a href="/project/contact.html">Contact Us</a>
     </nav>
-    <hr />
-    <h2>Site Map</h2>
-    <div class="sitemap">
-      <div class="sm-home">Home</div>
-      <div class="sm-page2">
-        [FAQ]
-     
-      </div>
-      <div class="sm-page3">Contact Us</div>
-
-      <div class="top">&nbsp;</div>
-      <div class="left">&nbsp;</div>
-      <div class="right">&nbsp;</div>
-    </div>
-    <hr />
     <h2>Wireframes</h2>
     
     <h3>Home</h3>
@@ -107,8 +96,29 @@ ensures an unforgettable river experience tailored just for you."</p>
     <img src="https://byui-cse.github.io/wdd130-ww-course/images/wwr/wwr-wireframe-aboutus-update.png" alt="page 2 wireframe">
   </main>
   <footer>
-      <p>©2024 🌴 Rafting Site Document 🌴 Herzan Carcache Huerta 🌴 WDD 130</p>
-  </footer>
+    <div class="footer-left">
+      <p>&copy; <span id="current-year"></span> Herzan Francisco Huerta, Nicaragua. All rights reserved.</p>
+      <p>Last modified: <span id="last-modified"></span></p>
+    </div>
+
+    <div class="footer-right">
+      <p><a href="index.html">Home</a></p>
+      <p><a href="contact.html">Contact Us</a></p>
+      <p><a href="about.html">About Us</a></p>
+      <p><a href="trips.html">Trips</a></p>
+        <div class="social">
+            <a href="https://facebook.com">
+                <img src="image/facebook.png" alt="Facebook icon">
+            </a>
+            <a href="https://x.com">
+                <img src="image/x.png" alt="Twitter icon">
+            </a> 
+            <a href="https://instagram.com">
+                <img src="image/instagram.png" alt="Instagram icon">
+            </a>
+        </div>
+    </div>
+</footer>
 </body>
 
 </html>
