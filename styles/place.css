@@ -45,7 +45,7 @@ h1 {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Added shadow for depth */
     transition: background-color 0.3s; /* Smooth transition */
     max-width: 90%; /* Make boxes responsive */
-    margin: 1rem 0; /* Add margin for spacing */
+    margin: 1rem auto; /* Add margin for spacing */
 }
 
 h2 {
@@ -101,7 +101,7 @@ h2 {
     font-size: calc(1.5rem + 1vw); /* Fluid typography */
 }
 
-/* Responsive Design Without Media Queries */
+/* Responsive Design */
 .container {
     display: flex;
     flex-direction: column; /* Default column layout for smaller screens */
@@ -111,7 +111,7 @@ h2 {
 .data-box,
 .weather-box {
     width: 90%; /* Ensure boxes are responsive */
-    max-width: 300px; /* Limit max width */
+    max-width: 90%; /* Limit max width */
 }
 
 /* Responsive Layout for Larger Screens */
