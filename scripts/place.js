@@ -38,4 +38,3 @@ displayWindChill();
 // Additional: Auto-update year in footer
 const currentYear = new Date().getFullYear();
 document.getElementById('current-year').textContent = currentYear;
-
