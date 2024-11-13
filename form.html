@@ -17,41 +17,43 @@
     <h1>Product Review Form</h1> <!-- Header content -->
 </header>
   <div class="container">
-    <form id="reviewForm" method="get" action="review.html">
-        <label for="productName">Product Name:</label>
-        <select id="productName" name="productName" required>
-            <option value="" disabled selected>Select a Product...</option>
-        </select>
-
-        <fieldset>
-            <legend>Overall Rating:</legend>
-            <label><input type="radio" name="rating" value="1" required> ☆</label>
-            <label><input type="radio" name="rating" value="2" required> ☆☆</label>
-            <label><input type="radio" name="rating" value="3" required> ☆☆☆</label>
-            <label><input type="radio" name="rating" value="4" required> ☆☆☆☆</label>
-            <label><input type="radio" name="rating" value="5" required> ☆☆☆☆☆</label>
-        </fieldset>
-
-        <label for="installationDate">Date of Installation:</label>
-        <input type="date" id="installationDate" name="installationDate" required>
-
-        <fieldset>
-          <legend>Which features did you find useful in the product? (check all that apply)</legend>
-          <label><input type="checkbox" name="features" value="Durability"> Durability</label>
-          <label><input type="checkbox" name="features" value="Ease of Use"> Ease of Use</label>
-          <label><input type="checkbox" name="features" value="Performance"> Performance</label>
-          <label><input type="checkbox" name="features" value="Design"> Design</label>
-        </fieldset>
-
-        <label for="writtenReview">Written Review:</label>
-        <textarea id="writtenReview" name="writtenReview" rows="4" placeholder="Write your review here..."></textarea>
-
-        <label for="userName">Your Name:</label>
-        <input type="text" id="userName" name="userName" placeholder="Optional">
-
-        <!-- Updated submit button -->
-        <input type="submit" id="submitButton" value="Submit">
-    </form>
+    <form id="reviewForm" method="get" action="review.html" onsubmit="return handleFormSubmission(event)">
+      <label for="productName">Product Name:</label>
+      <select id="productName" name="productName" required>
+          <option value="" disabled selected>Select a Product...</option>
+          <!-- Add product options here dynamically -->
+      </select>
+  
+      <fieldset>
+          <legend>Overall Rating:</legend>
+          <label><input type="radio" name="rating" value="1" required> ☆</label>
+          <label><input type="radio" name="rating" value="2" required> ☆☆</label>
+          <label><input type="radio" name="rating" value="3" required> ☆☆☆</label>
+          <label><input type="radio" name="rating" value="4" required> ☆☆☆☆</label>
+          <label><input type="radio" name="rating" value="5" required> ☆☆☆☆☆</label>
+      </fieldset>
+  
+      <label for="installationDate">Date of Installation:</label>
+      <input type="date" id="installationDate" name="installationDate" required>
+  
+      <fieldset>
+        <legend>Which features did you find useful in the product? (check all that apply)</legend>
+        <label><input type="checkbox" name="features" value="Durability"> Durability</label>
+        <label><input type="checkbox" name="features" value="Ease of Use"> Ease of Use</label>
+        <label><input type="checkbox" name="features" value="Performance"> Performance</label>
+        <label><input type="checkbox" name="features" value="Design"> Design</label>
+      </fieldset>
+  
+      <label for="writtenReview">Written Review:</label>
+      <textarea id="writtenReview" name="writtenReview" rows="4" placeholder="Write your review here..."></textarea>
+  
+      <label for="userName">Your Name:</label>
+      <input type="text" id="userName" name="userName" placeholder="Optional">
+  
+      <!-- Corrected Submit Button with value="Submit" -->
+      <input type="submit" id="submitButton" value="Submit" />
+  </form>
+  
   </div>
 <footer>
   <p>&copy; <span id="currentyear"></span> Herzan Francisco Huerta, Nicaragua. All rights reserved.</p>
