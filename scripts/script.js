@@ -4,6 +4,7 @@ window.onload = function() {
     let reviewCount = localStorage.getItem('reviewCount');
     if (!reviewCount) {
         reviewCount = 0;  // Initialize review count if not found in localStorage
+        localStorage.setItem('reviewCount', reviewCount);  // Ensure it's set on first load
     }
     
     // Display the current review count
@@ -26,9 +27,9 @@ function handleFormSubmission(event) {
         // Get current review count from localStorage and increment it
         let reviewCount = localStorage.getItem('reviewCount');
         if (!reviewCount) {
-            reviewCount = 0;
+            reviewCount = 0; // Initialize if not found
         }
-        reviewCount++;
+        reviewCount++; // Increment the count
 
         // Save the updated count back to localStorage
         localStorage.setItem('reviewCount', reviewCount);
