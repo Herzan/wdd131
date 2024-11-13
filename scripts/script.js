@@ -1,11 +1,20 @@
 // Function to handle form submission
 function handleFormSubmission(event) {
-    const submitButton = document.getElementById('submitButton');
+    // Prevent form submission for validation
+    event.preventDefault();
 
-    // Check if the button value is "Submit"
-    if (submitButton.value === "Submit") {
-        event.preventDefault(); // Prevent the form from being submitted
-        displayMessage("Form cannot be submitted because the button value is 'Submit'.");
+    const productName = document.getElementById('productName').value;
+    const rating = document.querySelector('input[name="rating"]:checked');
+    const installationDate = document.getElementById('installationDate').value;
+
+    // Check if all required fields are filled out
+    if (!productName || !rating || !installationDate) {
+        displayMessage("Please complete all required fields.");
+    } else {
+        // If all fields are filled, simulate form submission (could also send data via AJAX, etc.)
+        displayMessage("Form submitted successfully!");
+        // Optional: You could clear the form or redirect to another page
+        // document.getElementById('reviewForm').reset();
     }
 }
 
