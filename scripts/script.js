@@ -13,8 +13,9 @@ function handleFormSubmission(event) {
     } else {
         // If all fields are filled, simulate form submission (could also send data via AJAX, etc.)
         displayMessage("Form submitted successfully!");
-        // Optional: Clear the form or redirect (this can be adjusted)
-        // document.getElementById('reviewForm').reset();
+
+        // Manually submit the form after successful validation
+        document.getElementById('reviewForm').submit(); // This will submit the form after successful validation
     }
 }
 
