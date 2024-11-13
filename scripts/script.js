@@ -1,3 +1,15 @@
+// On page load, check if the count of completed reviews exists in localStorage
+window.onload = function() {
+    // Retrieve the current count of reviews (default to 0 if not set)
+    let reviewCount = localStorage.getItem('reviewCount');
+    if (!reviewCount) {
+        reviewCount = 0;  // Initialize review count if not found in localStorage
+    }
+    
+    // Display the current review count
+    document.getElementById('reviewCountDisplay').innerText = `Completed Reviews: ${reviewCount}`;
+};
+
 // Function to handle form submission
 function handleFormSubmission(event) {
     // Prevent form submission for validation
@@ -11,9 +23,23 @@ function handleFormSubmission(event) {
     if (!productName || !rating || !installationDate) {
         displayMessage("Please complete all required fields.");
     } else {
+        // Get current review count from localStorage and increment it
+        let reviewCount = localStorage.getItem('reviewCount');
+        if (!reviewCount) {
+            reviewCount = 0;
+        }
         reviewCount++;
+
+        // Save the updated count back to localStorage
         localStorage.setItem('reviewCount', reviewCount);
+
+        // Display a success message
         displayMessage("Form submitted successfully!");
+
+        // Update the displayed review count
+        document.getElementById('reviewCountDisplay').innerText = `Completed Reviews: ${reviewCount}`;
+
+        // Optionally, reset the form after submission
         document.getElementById('reviewForm').reset();
     }
 }
@@ -50,7 +76,7 @@ function displayMessage(message) {
     messageBox.style.position = 'fixed';
     messageBox.style.top = '20px';
     messageBox.style.right = '20px';
-    messageBox.style.backgroundColor = '#f44336'; // Red background for error
+    messageBox.style.backgroundColor = '#4CAF50'; // Green background for success
     messageBox.style.color = 'white';
     messageBox.style.padding = '10px';
     messageBox.style.borderRadius = '5px';
@@ -76,3 +102,6 @@ const products = [
 
 // Populate the product dropdown
 populateProductSelect(products);
+
+// Add event listener for form submission
+document.getElementById('reviewForm').addEventListener('submit', handleFormSubmission);
