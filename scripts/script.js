@@ -11,11 +11,10 @@ function handleFormSubmission(event) {
     if (!productName || !rating || !installationDate) {
         displayMessage("Please complete all required fields.");
     } else {
-        // If all fields are filled, simulate form submission (could also send data via AJAX, etc.)
+        reviewCount++;
+        localStorage.setItem('reviewCount', reviewCount);
         displayMessage("Form submitted successfully!");
-
-        // Manually submit the form after successful validation
-        document.getElementById('reviewForm').submit(); // This will submit the form after successful validation
+        document.getElementById('reviewForm').reset();
     }
 }
 
