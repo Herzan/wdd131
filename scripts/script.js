@@ -1,5 +1,5 @@
- // Function to handle form submission
- function handleFormSubmission(event) {
+// Function to handle form submission
+function handleFormSubmission(event) {
     // Prevent form submission for validation
     event.preventDefault();
 
@@ -13,7 +13,7 @@
     } else {
         // If all fields are filled, simulate form submission (could also send data via AJAX, etc.)
         displayMessage("Form submitted successfully!");
-        // Optionally clear the form or redirect (this can be adjusted)
+        // Optional: Clear the form or redirect (this can be adjusted)
         // document.getElementById('reviewForm').reset();
     }
 }
