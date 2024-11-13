@@ -1,8 +1,12 @@
+/* Import Roboto font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif; /* Use Roboto font */
   background-color: #f4f4f4;
   margin: 0;
   padding: 20px;
+  color: #333; /* Improve text color contrast */
 }
 
 .container {
@@ -11,23 +15,25 @@ body {
   background: white;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
 header {
   background-color: #0e0374; /* Header background color */
   color: white; /* Text color */
   text-align: center; /* Center text */
-  padding: 1rem; /* Padding around header */
+  padding: 1rem;
 }
 
 h1 {
-  margin: 0; /* Remove default margin */
+  margin: 0;
+  font-size: 2rem;
 }
 
 label {
   display: block;
   margin: 10px 0 5px;
+  font-weight: 700; /* Make labels bolder */
 }
 
 input[type="text"],
@@ -35,19 +41,31 @@ input[type="date"],
 select,
 textarea {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   margin: 5px 0 15px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: all 0.3s ease; /* Smooth transition for focus state */
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+  border-color: #0e0374;
+  box-shadow: 0 0 5px rgba(14, 3, 116, 0.3);
 }
 
 input[type="submit"] {
   background-color: #5cb85c;
   color: white;
   border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
+  padding: 12px 20px;
+  border-radius: 6px;
   cursor: pointer;
+  font-weight: 700;
+  transition: all 0.3s ease;
 }
 
 input[type="submit"]:hover {
@@ -56,12 +74,11 @@ input[type="submit"]:hover {
 
 fieldset {
   border: 1px solid #ccc;
-  padding: 10px;
-  margin-bottom: 15px;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 6px;
 }
 
-
-/* Footer Styles */
 footer {
   background-color: #0e0374;
   color: white;
@@ -80,4 +97,26 @@ footer {
 .pic div:nth-of-type(8),
 .pic div:nth-of-type(13) {
   grid-column: 3/5;
+}
+
+/* Media Queries for responsive design */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr; /* Stack content in a single column */
+    padding: 10px;
+  }
+
+  header, footer {
+    padding: 0.8rem;
+  }
+
+  input[type="submit"] {
+    width: 100%; /* Full width for buttons on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem; /* Smaller heading size on smaller screens */
+  }
 }
