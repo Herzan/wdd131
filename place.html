@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WDD 131 - Dynamic Web Fundamentals - Herzan Francisco Huerta</title>
-  <meta name="description" content="Join Herzan Francisco Huerta on a journey through WDD 131, exploring the essentials of dynamic web development with HTML, CSS, and JavaScript. Discover valuable skills and resources to enhance your web development expertise.">
+  <meta name="description" content="Explore the essentials of dynamic web development with Herzan Francisco Huerta through HTML, CSS, and JavaScript. Discover valuable skills and resources.">
   <meta name="author" content="Herzan Francisco Huerta">
   <link rel="stylesheet" href="styles/place.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,23 +13,23 @@
   <script src="scripts/place.js" defer></script>
 </head>
 <body>
-  <header>
-    <h1>Nicaragua</h1>
-    <div class="svg-container">
+  <header role="banner" aria-label="Main Header">
+    <h1 lang="es">Nicaragua</h1>
+    <div class="svg-container" aria-hidden="true">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="50" height="50">
         <path d="M12 2C10.3 2 9 3.3 9 5c0 3.5-3 6-3 8 0 3.3 4.7 8 4.7 8S15 16.3 15 13c0-1.6-1-4-3-8C12 3.3 12 2 12 2zm0 10a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" fill="#007BFF"/>
       </svg>
     </div>
   </header>
 
-  <main>
+  <main role="main">
     <section class="hero">
       <img 
-        src="images/Guard.webp" 
-        srcset="images/Guard.webp 400w, images/Guard.webp 800w, images/Guard.webp 1200w" 
+        src="images/Guard.png" 
+        srcset="images/Guard-small.png 400w, images/Guard-medium.png 800w, images/Guard.png 1200w" 
         sizes="(max-width: 600px) 400px, (max-width: 1200px) 800px, 1200px" 
         alt="Guardabarranco, the national bird of Nicaragua"
-        class="hero-image">
+        class="hero-image" loading="lazy">
       <div class="data-box">
         <h2>Data</h2>
         <ul>
@@ -46,7 +46,7 @@
     </section>
 
     <section class="weather-box">
-      <h2>Weather <span class="weather-icon">⛅</span></h2>
+      <h2>Weather <span class="weather-icon" aria-hidden="true">⛅</span></h2>
       <p><strong>Temperature:</strong> 28 °C</p>
       <p><strong>Conditions:</strong> Mostly Sunny</p>
       <p><strong>Wind:</strong> 12 km/h</p>
@@ -54,7 +54,7 @@
     </section>
   </main>
 
-  <footer>
+  <footer role="contentinfo">
     <p>&copy; <span id="current-year"></span> Herzan Francisco Huerta, Nicaragua. All rights reserved.</p>
     <p>Last modified: <span id="last-modified"></span></p>
   </footer>
