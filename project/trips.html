@@ -5,80 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Explore WDD 131 - Dynamic Web Fundamentals with Herzan Francisco Huerta. Learn essential web development skills in HTML, CSS, and JavaScript to build dynamic and responsive websites.">
     <meta name="author" content="Herzan Francisco Huerta">
-    <link rel="stylesheet" href="style/rafting.css">
-    <link rel="stylesheet" href="styles/temples-large.css">
+    <link rel="stylesheet" href="styles/rafting1.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <script src="scripts/temples.js" defer></script>
-
-    <style>
-        /* CSS for the image slider */
-        .slider-container {
-            width: 100%;
-            height: 300px; /* Adjust height as needed */
-            overflow: hidden;
-            position: relative;
-        }
-        .slider {
-            width: 500%; /* Each slide will take 20% of the container width */
-            height: 100%;
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-        .slide {
-            width: 20%; /* Each slide takes 20% of the slider width */
-            flex: 1;
-        }
-        .slide img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        /* Manual navigation buttons */
-        .prev, .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 24px;
-            color: white;
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 10px;
-            z-index: 1;
-        }
-        .prev {
-            left: 0;
-        }
-        .next {
-            right: 0;
-        }
-        /* Grid layout for adventures section */
-        .adventure-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-        figure {
-            margin: 0;
-        }
-        figcaption {
-            text-align: center;
-        }
-        /* Styles for the table */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-        th {
-            background-color: #f4f4f4;
-        }
-    </style>
+    <script src="scripts/trips.js" defer></script>
 </head>
 <body>
     <!-- Header -->
@@ -179,7 +110,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; <span id="year"></span> Herzan Francisco Huerta, Nicaragua. All rights reserved.</p>
+        <p>&copy; <span id="current-year"></span> Herzan Francisco Huerta, Nicaragua. All rights reserved.</p>
         <p>Last modified: <span id="last-modified"></span></p>
         
         <div class="social">
@@ -187,38 +118,13 @@
                 <img src="image/facebook.png" alt="fb icon">
             </a>
             <a href="https://x.com">
-                <img src="image/x.png" alt="  X icon">
+                <img src="image/x.png" alt="X icon">
             </a>
             <a href="https://instagram.com">
                 <img src="image/instagram.png" alt="instagram icon">
             </a>
         </div>
     </footer>
-    </footer>
     
-
-    <script>
-        let slideIndex = 1;
-        showSlide(slideIndex);
-        
-        function moveSlide(n) {
-            showSlide(slideIndex += n);
-        }
-        
-        function showSlide(n) {
-            let slides = document.querySelectorAll('.slide');
-            if (n > slides.length) { slideIndex = 1; }
-            if (n < 1) { slideIndex = slides.length; }
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.transform = `translateX(-${(slideIndex - 1) * 100}%)`;
-            }
-        }
-
-        // Auto-play feature for the slider
-        setInterval(() => {
-            moveSlide(1);
-        }, 5000); // Change slide every 5 seconds
-    </script>
-
 </body>
 </html>
