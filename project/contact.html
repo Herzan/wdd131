@@ -4,10 +4,15 @@
  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - - Rafting Project</title>
-    <meta name="description" content="Contact us for inquiries, reservations, and website suggestions.">
-    <meta name="author" content="Rafting Project">
+    <title>WDD 131 - Dynamic Web Fundamentals - Herzan Francisco Huerta</title>
+    <meta name="description" content="Explore WDD 131 - Dynamic Web Fundamentals with Herzan Francisco Huerta. Learn essential web development skills in HTML, CSS, and JavaScript to build dynamic and responsive websites.">
+    <meta name="author" content="Herzan Francisco Huerta">
     <link rel="stylesheet" href="styles/rafting.css">
+    <link rel="stylesheet" href="styles/temples-large.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="scripts/temples.js" defer></script>
 
 
 </head>
@@ -15,7 +20,7 @@
 <body>
     <header>
         <a id="logo_link" href="index.html">
-            <img class="logo" src="image/R.png" width="100" alt="Awesome Rafting Logo">
+            <img class="logo" src="image/R.jpg" width="100" alt="Awesome Rafting Logo">
         </a>
         <nav>
             <a href="about.html">Home</a>
@@ -34,38 +39,6 @@
             <p>Email: info@raftingadventures.com</p>
             <!-- Embedded Google Map -->
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.67890!2d-73.987654!3d40.123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQ4JzQwLjIiTiA3M8KwMTYnNDUuMSJX!5e0!3m2!1sen!2sus!4v1589999999999!5m2!1sen!2sus" allowfullscreen></iframe>
-        </section>
-
-        <section class="employee-profiles">
-            <h2>Meet Our Team</h2>
-            <div class="employee">
-                <img src="image/employee1.jpg" width="200" alt="Employee 1">
-                <p>John Doe<br>Adventure Guide</p>
-            </div>
-            <div class="employee">
-                <img src="image/1.png" width="200" alt="Employee 2">
-                <p>Dwayne Smith - Adventure Specialist</p>
-            </div>
-            <div class="employee">
-                <img src="image/2.jpg" width="200" alt="Employee 3">
-                <p>Sam Johnson - Safety Officer</p>
-            </div>
-            <div class="employee">
-                <img src="image/3.jpg" width="200" height="200" alt="Employee 4">
-                <p>Sam Adams - Equipment Manager</p>
-            </div>
-            <div class="employee">
-                <img src="image/4.jpg" width="200" height="200" alt="Employee 5">
-                <p>David Lee - River Guide</p>
-            </div>
-            <div class="employee">
-                <img src="image/5.jpg" width="200" height="200" alt="Employee 6">
-                <p>Lisa Brown - Customer Relations</p>
-            </div>
-            <div class="employee">
-                <img src="image/6.jpg" width="200" height="200" alt="Employee 7">
-                <p>Michael Scott - Marketing Manager</p>
-            </div>
         </section>
 
         <div id="feedback"></div>
@@ -95,17 +68,17 @@
      
     </main>
     <footer class="contact_footer">
-        <p>©️2024 🌴 {Herzan Carcache Huerta} 🌴 [Managua, Nicaragua]</p>
-        <p><a href="site-plan-rafting.html">Site Plan</a></p>
-        <p><a href="contact.html">Contact Us</a></p>
+        <p>&copy; <span id="year"></span> Herzan Francisco Huerta, Nicaragua. All rights reserved.</p>
+        <p>Last modified: <span id="last-modified"></span></p>
+        
         <div class="social">
-            <a href="https://facebook.com" target="_blank">
+            <a href="https://facebook.com">
                 <img src="image/facebook.png" alt="fb icon">
             </a>
-            <a href="https://twitter.com" target="_blank">
-                <img src="image/twitter.png" alt="twitter icon">
+            <a href="https://x.com">
+                <img src="image/x.png" alt="  X icon">
             </a>
-            <a href="https://instagram.com" target="_blank"> 
+            <a href="https://instagram.com">
                 <img src="image/instagram.png" alt="instagram icon">
             </a>
         </div>
