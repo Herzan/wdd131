@@ -7,16 +7,22 @@ document.addEventListener("DOMContentLoaded", () => {
     const lastModified = document.lastModified;
     document.getElementById("last-modified").textContent = lastModified;
 
-    // Form Validation Example
-    const form = document.querySelector(".newsletter-signup form");
-    form.addEventListener("submit", (event) => {
+    // Form Validation and Error Message
+    const form = document.getElementById('newsletterForm');
+    const emailInput = document.getElementById('email');
+    const errorMsg = document.getElementById('error-msg');
+
+    form.addEventListener('submit', (event) => {
         event.preventDefault();
-        const emailInput = document.getElementById("email");
-        if (validateEmail(emailInput.value)) {
-            alert("Thank you for subscribing!");
-            emailInput.value = ""; // Clear the input field after successful submission
+
+        // Validate Email
+        if (!emailInput.validity.valid) {
+            errorMsg.style.display = 'block';
+            errorMsg.textContent = 'Please enter a valid email address.';
         } else {
-            alert("Please enter a valid email address.");
+            errorMsg.style.display = 'none';
+            alert('Thank you for subscribing!');
+            emailInput.value = ''; // Clear the input field after successful submission
         }
     });
 
@@ -40,9 +46,3 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
-
-// Helper Function: Email Validation
-function validateEmail(email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-}
