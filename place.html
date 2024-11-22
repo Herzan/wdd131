@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WDD 131 - Dynamic Web Fundamentals - Herzan Francisco Huerta</title>
-  <meta name="description" content="Explore the essentials of dynamic web development with Herzan Francisco Huerta through HTML, CSS, and JavaScript. Discover valuable skills and resources.">
+  <title>Explore Nicaragua - Dynamic Web Fundamentals - Herzan Francisco Huerta</title>
+  <meta name="description" content="Explore the essentials of dynamic web development with Herzan Francisco Huerta. Learn about Nicaragua, its culture, weather, and important facts.">
   <meta name="author" content="Herzan Francisco Huerta">
   <link rel="stylesheet" href="styles/place.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,8 +14,9 @@
 </head>
 <body>
   <header role="banner" aria-label="Main Header">
-    <h1 lang="es">Nicaragua</h1>
+    <h1>Explore Nicaragua</h1>
     <div class="svg-container" aria-hidden="true">
+      <!-- Optimized SVG for Nicaragua's flag icon -->
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="50" height="50">
         <path d="M12 2C10.3 2 9 3.3 9 5c0 3.5-3 6-3 8 0 3.3 4.7 8 4.7 8S15 16.3 15 13c0-1.6-1-4-3-8C12 3.3 12 2 12 2zm0 10a2 2 0 1 1 0-4 2 2 0 0 1 0 4z" fill="#007BFF"/>
       </svg>
@@ -24,14 +25,20 @@
 
   <main role="main">
     <section class="hero">
-      <img 
-        src="images/Guard.png" 
-        srcset="images/Guard-small.png 400w, images/Guard-medium.png 800w, images/Guard.png 1200w" 
-        sizes="(max-width: 600px) 400px, (max-width: 1200px) 800px, 1200px" 
-        alt="Guardabarranco, the national bird of Nicaragua"
-        class="hero-image" loading="lazy">
+      <!-- Optimized image format with WebP fallback -->
+      <picture>
+        <source srcset="images/Guard.png" type="image/png">
+        <img 
+          src="images/Guard.png" 
+          srcset="images/Guard-small.png 400w, images/Guard-medium.png 800w, images/Guard.png 1200w" 
+          sizes="(max-width: 600px) 400px, (max-width: 1200px) 800px, 1200px" 
+          alt="Guardabarranco, the national bird of Nicaragua"
+          class="hero-image" 
+          loading="lazy">
+      </picture>
+      
       <div class="data-box">
-        <h2>Data</h2>
+        <h2>Country Data</h2>
         <ul>
           <li><strong>Area:</strong> 130,373 sq km</li>
           <li><strong>Population:</strong> 6,948,392</li>
@@ -58,5 +65,11 @@
     <p>&copy; <span id="current-year"></span> Herzan Francisco Huerta, Nicaragua. All rights reserved.</p>
     <p>Last modified: <span id="last-modified"></span></p>
   </footer>
+
+  <script>
+    // Update the current year and last modified date dynamically
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+    document.getElementById('last-modified').textContent = document.lastModified;
+  </script>
 </body>
 </html>
