@@ -69,6 +69,7 @@ ul li {
 
 .weather-icon {
     font-size: 1.5rem;
+    display: none; /* Hide by default */
 }
 
 /* Hover effects */
@@ -108,6 +109,13 @@ h2 {
     .weather-box {
         width: 95%; /* Wider boxes on mobile */
         margin: 1rem auto; /* Center the boxes */
+    }
+}
+
+/* Show the emoticon only on larger screens */
+@media (min-width: 768px) {
+    .weather-icon {
+        display: inline-block; /* Show on larger screens */
     }
 }
 
