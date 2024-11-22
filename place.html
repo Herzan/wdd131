@@ -13,7 +13,7 @@
   <script src="scripts/place.js" defer></script>
 </head>
 <body>
-  <header role="banner" aria-label="Main Header">
+  <header>
     <h1>Explore Nicaragua</h1>
     <div class="svg-container" aria-hidden="true">
       <!-- Optimized SVG for Nicaragua's flag icon -->
@@ -23,23 +23,22 @@
     </div>
   </header>
 
-  <main role="main">
+  <main>
     <section class="hero">
       <!-- Optimized image format with WebP fallback -->
       <picture>
         <!-- WebP format images for browsers that support it -->
-        <source srcset="images/Guard-small.webp 400w, images/Guard-medium.webp 800w, images/Guard.webp 1200w" type="image/webp">
+        <source srcset="images/Guard-small.webp 400w, images/Guard-medium.webp 800w, images/Guard.webp 1200w" type="image/webp" sizes="(max-width: 600px) 400px, (max-width: 1200px) 800px, 1200px">
         
         <!-- Fallback PNG images for browsers that don't support WebP -->
-        <source srcset="images/Guard-small.png 400w, images/Guard-medium.png 800w, images/Guard.png 1200w" type="image/png">
+        <source srcset="images/Guard-small.png 400w, images/Guard-medium.png 800w, images/Guard.png 1200w" type="image/png" sizes="(max-width: 600px) 400px, (max-width: 1200px) 800px, 1200px">
         
         <!-- Default image element for browsers that don't support <picture> or <source> -->
         <img 
           src="images/Guard.png" 
           alt="Guardabarranco, the national bird of Nicaragua"
           class="hero-image" 
-          loading="lazy" 
-          sizes="(max-width: 600px) 400px, (max-width: 1200px) 800px, 1200px">
+          loading="lazy">
       </picture>
       
       <div class="data-box">
@@ -66,9 +65,15 @@
     </section>
   </main>
 
-  <footer role="contentinfo">
+  <footer>
     <p>&copy; <span id="current-year"></span> Herzan Francisco Huerta, Nicaragua. All rights reserved.</p>
     <p>Last modified: <span id="last-modified"></span></p>
   </footer>
+
+  <script>
+    // Update the current year and last modified date dynamically
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+    document.getElementById('last-modified').textContent = document.lastModified;
+  </script>
 </body>
 </html>
